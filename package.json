@@ -1,0 +1,28 @@
+{
+  "name": "60fps-scraper",
+  "version": "1.0.0",
+  "description": "60fps.design scraper with n8n and Vercel support",
+  "main": "scrape60fps.js",
+  "scripts": {
+    "start": "node scrape60fps.js",
+    "n8n": "node scrape60fps-n8n.js",
+    "dev": "node scrape60fps.js",
+    "vercel-build": "echo 'Vercel build completed'",
+    "postinstall": "npx playwright install chromium"
+  },
+  "dependencies": {
+    "playwright": "^1.55.0"
+  },
+  "keywords": [
+    "scraper",
+    "60fps",
+    "playwright",
+    "n8n",
+    "vercel"
+  ],
+  "author": "",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
