@@ -7,10 +7,15 @@
     "start": "node scrape60fps.js",
     "n8n": "node scrape60fps-n8n.js",
     "dev": "node scrape60fps.js",
+    "install-browsers": "npx playwright install chromium",
     "vercel-build": "echo 'Vercel build completed'",
-    "postinstall": "npx playwright install chromium --with-deps"
+    "postinstall": "echo 'Skipping browser installation for Vercel'"
   },
   "dependencies": {
+    "playwright-core": "^1.55.0",
+    "@sparticuz/chromium": "^131.0.0"
+  },
+  "devDependencies": {
     "playwright": "^1.55.0"
   },
   "keywords": [

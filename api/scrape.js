@@ -1,4 +1,5 @@
-const { chromium } = require('playwright');
+const { chromium } = require('playwright-core');
+const chromiumPkg = require('@sparticuz/chromium');
 
 /**
  * Vercel Serverless Function for 60fps.design Scraper
@@ -27,7 +28,9 @@ async function scrape60fps() {
         // Launch browser in headless mode with optimized settings for serverless
         browser = await chromium.launch({ 
             headless: true,
+            executablePath: await chromiumPkg.executablePath(),
             args: [
+                ...chromiumPkg.args,
                 '--no-sandbox',
                 '--disable-setuid-sandbox',
                 '--disable-dev-shm-usage',

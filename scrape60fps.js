@@ -1,4 +1,5 @@
-const { chromium } = require('playwright');
+// Use regular playwright for local development
+const { chromium } = require('playwright-core');
 
 /**
  * 60fps.design Scraper

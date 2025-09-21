@@ -4,5 +4,10 @@
       "maxDuration": 60
     }
   },
-  "installCommand": "npm install && npx playwright install chromium --with-deps"
+  "build": {
+    "env": {
+      "PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD": "1"
+    }
+  },
+  "installCommand": "npm install"
 }

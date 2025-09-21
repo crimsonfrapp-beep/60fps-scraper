@@ -15,6 +15,9 @@ A Node.js scraper for extracting motion design videos from 60fps.design with sup
 
 ```bash
 npm install
+
+# For local development, install browsers:
+npm run install-browsers
 ```
 
 ## Usage
