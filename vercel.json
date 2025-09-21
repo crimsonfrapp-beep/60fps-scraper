@@ -1,13 +1,15 @@
 {
   "functions": {
     "api/scrape.js": {
-      "maxDuration": 60
+      "maxDuration": 60,
+      "runtime": "nodejs18.x"
     }
   },
   "build": {
     "env": {
-      "PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD": "1"
+      "NODE_ENV": "production"
     }
   },
-  "installCommand": "npm install && npx playwright install chromium"
+  "installCommand": "npm install && npx playwright install chromium --with-deps",
+  "buildCommand": "npm run vercel-build"
 }

@@ -1,4 +1,4 @@
-const { chromium } = require('playwright');
+import { chromium } from 'playwright';
 
 /**
  * Vercel Serverless Function for 60fps.design Scraper

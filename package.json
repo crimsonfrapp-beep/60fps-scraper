@@ -8,7 +8,7 @@
     "n8n": "node scrape60fps-n8n.js",
     "dev": "node scrape60fps.js",
     "vercel-build": "echo 'Vercel build completed'",
-    "postinstall": "npx playwright install chromium"
+    "postinstall": "npx playwright install chromium --with-deps"
   },
   "dependencies": {
     "playwright": "^1.55.0"
@@ -23,6 +23,7 @@
   "author": "",
   "license": "MIT",
   "engines": {
-    "node": ">=18.0.0"
-  }
+    "node": "18.x"
+  },
+  "type": "module"
 }
