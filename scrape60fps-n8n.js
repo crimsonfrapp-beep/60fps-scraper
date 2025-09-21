@@ -4,7 +4,7 @@
 // Runs the 60fps.design scraper and prints clean JSON to stdout.
 // Stdout contains ONLY JSON on success. Any errors go to stderr and exit code is non-zero.
 
-import { scrape60fps } from './scrape60fps.js';
+const { scrape60fps } = require('./scrape60fps');
 
 function extractTitleFromUrl(url) {
 	if (!url) return 'Untitled Shot';

@@ -1,4 +1,4 @@
-import { chromium } from 'playwright';
+const { chromium } = require('playwright');
 
 /**
  * Vercel Serverless Function for 60fps.design Scraper
@@ -311,7 +311,7 @@ async function scrape60fps() {
 }
 
 // Vercel serverless function handler
-export default async function handler(req, res) {
+module.exports = async function handler(req, res) {
     // Set CORS headers for n8n
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');

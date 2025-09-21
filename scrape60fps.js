@@ -1,4 +1,4 @@
-import { chromium } from 'playwright';
+const { chromium } = require('playwright');
 
 /**
  * 60fps.design Scraper
@@ -461,9 +461,9 @@ async function main() {
 }
 
 // Run the scraper if this file is executed directly
-if (import.meta.url === `file://${process.argv[1]}`) {
+if (require.main === module) {
     main();
 }
 
 // Export for use in other modules
-export { scrape60fps, main };
+module.exports = { scrape60fps, main };

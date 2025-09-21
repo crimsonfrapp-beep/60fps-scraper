@@ -4,11 +4,5 @@
       "maxDuration": 60
     }
   },
-  "build": {
-    "env": {
-      "NODE_ENV": "production"
-    }
-  },
-  "installCommand": "npm install && npx playwright install chromium --with-deps",
-  "buildCommand": "npm run vercel-build"
+  "installCommand": "npm install && npx playwright install chromium --with-deps"
 }
