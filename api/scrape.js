@@ -326,9 +326,6 @@ module.exports = async function handler(req, res) {
     }
     
     try {
-        // Parse limit parameter
-        const limit = req.query.limit ? parseInt(req.query.limit, 10) : null;
-        
         // Run the scraper
         const shots = await scrape60fps();
         const nowIso = new Date().toISOString();
@@ -341,11 +338,6 @@ module.exports = async function handler(req, res) {
             source: '60fps.design',
             scraped_at: nowIso
         }));
-        
-        // Apply limit if specified
-        if (limit && limit > 0) {
-            rows = rows.slice(0, limit);
-        }
         
         // Return JSON response
         return res.status(200).json(rows);
